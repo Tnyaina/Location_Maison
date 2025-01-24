@@ -1,0 +1,294 @@
+/* =============== CRUD Styles =============== */
+
+/* Variables */
+
+/* Actions Container */
+.actions-container {
+    width: 100%;
+    padding: 20px 20px 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    /* Aligné à gauche */
+}
+
+.btn-add {
+    background: var(--blue);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.btn-add:hover {
+    background: #3a31b5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Container */
+.recentOrders {
+    overflow-x: auto;
+    min-width: 100%;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Styles */
+.recentOrders table {
+    width: 100%;
+    min-width: var(--table-min-width);
+    border-collapse: collapse;
+}
+
+.recentOrders thead {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.recentOrders th, 
+.recentOrders td {
+    text-align: center; /* Centre horizontalement */
+    vertical-align: middle; /* Centre verticalement */
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+}
+
+
+/* Actions Column */
+.recentOrders td:last-child {
+    text-align: center; /* Centre horizontalement */
+    vertical-align: middle; /* Centre verticalement */
+    min-width: 150px; /* Facultatif pour laisser de la place */
+}
+
+/* Action Buttons */
+.btn-action {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-action ion-icon {
+    font-size: 18px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--white);
+    margin: 40px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--black1);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--black2);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 2px rgba(42, 33, 133, 0.1);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 14px;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Image Preview */
+.habitation-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.no-image {
+    width: 80px;
+    height: 60px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--black2);
+}
+
+/* Modal Header */
+.modal h2 {
+    margin-bottom: 25px;
+    color: var(--black1);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .recentOrders {
+        overflow-x: auto;
+    }
+
+    .recentOrders table {
+        width: var(--table-min-width);
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .actions-container {
+        padding: 15px;
+    }
+
+    .btn-add {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Style du bouton vert */
+.btn-action.view {
+    background-color: #28a745; /* Vert */
+    color: white;
+}
+
+.btn-action.view:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+    transform: scale(1.1);
+}
+
+/* Style du bouton bleu */
+.btn-action.edit {
+    background-color: #007bff; /* Bleu */
+    color: white;
+}
+
+.btn-action.edit:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+    transform: scale(1.1);
+}
+
+/* Style du bouton rouge */
+.btn-action.delete {
+    background-color: #dc3545; /* Rouge */
+    color: white;
+}
+
+.btn-action.delete:hover {
+    background-color: #c82333; /* Rouge plus foncé au survol */
+    transform: scale(1.1);
+}
+
+/* Icône centrée */
+.btn-action ion-icon {
+    font-size: 20px;
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .btn-action {
+        padding: 6px 10px;
+    }
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}

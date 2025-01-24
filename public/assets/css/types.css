@@ -1,0 +1,130 @@
+/* Styles pour la page types */
+.types-wrapper {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .types-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .types-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .btn-add {
+    background: var(--blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .types-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .types-table th, 
+.types-table td {
+    text-align: center; /* Centre horizontalement */
+    vertical-align: middle; /* Centre verticalement */
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+  
+  .types-table tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .modal-header {
+    color: var(--blue);
+    margin-bottom: 20px;
+  }
+  
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .btn-secondary {
+    background: var(--black2);
+    color: var(--white);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  
+  /* Style général du bouton apart */
+.btn-action.apart {
+  background-color: #17a2b8; /* Couleur cyan */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Effet au survol */
+.btn-action.apart:hover {
+  background-color: #138496; /* Cyan plus foncé */
+  transform: scale(1.1); /* Agrandissement léger */
+}
+
+/* Icône centrée */
+.btn-action.apart ion-icon {
+  font-size: 20px;
+}

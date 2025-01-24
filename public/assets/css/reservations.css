@@ -1,0 +1,139 @@
+/* Styles pour les pages de réservations */
+.reservations-container {
+    padding: 20px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    
+    margin: 10px auto; /* Réduire l'espace autour */
+    max-width: 90%;
+}
+
+.filters-container {
+    padding: 15px;
+    background: var(--white);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+.filters-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filters-form select,
+.filters-form input {
+    padding: 8px 15px;
+    border: 1px solid var(--black2);
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.btn-filter {
+    background: var(--blue);
+    color: var(--white);
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-filter:hover {
+    opacity: 0.8;
+}
+
+.reservation-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.detail-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.detail-card h3 {
+    color: var(--blue);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.detail-card .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.status-badge.confirmed {
+    background: #2ecc71;
+}
+
+.status-badge.pending {
+    background: #f1c40f;
+}
+
+.status-badge.cancelled {
+    background: #e74c3c;
+}
+
+.btn-action {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--white);
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-action i {
+    font-size: 16px;
+}
+
+.btn-view {
+    background: #3498db;
+}
+
+.btn-edit {
+    background: #2ecc71;
+}
+
+.btn-delete {
+    background: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    .filters-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filters-form select,
+    .filters-form input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,8 @@
+# Activer le moteur de réécriture
+RewriteEngine On
+RewriteBase /ETU003080/t/20250117/public
+
+# Rediriger toutes les autres requêtes vers public
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
